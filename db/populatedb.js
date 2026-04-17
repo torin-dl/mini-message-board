@@ -16,11 +16,8 @@ VALUES
 async function main() {
     console.log("seeding...");
     const client = new Client({
-        host: process.env.PGHOST,
-        user: process.env.PGUSER,
-        database: process.env.PGDATABASE,
-        password: process.env.PGPASSWORD,
-        port: process.env.PGPORT,
+        connectionString:
+            "postgresql://postgres:fCEqaWfSIHmsCEmoseCYuYRxJWNfcbSq@centerbeam.proxy.rlwy.net:52929/railway",
     });
     await client.connect();
     await client.query(SQL);

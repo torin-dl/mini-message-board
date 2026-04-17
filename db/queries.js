@@ -7,7 +7,6 @@ async function addMessage(text, user, date) {
 
 async function getMessages() {
     const { rows } = await pool.query("SELECT * FROM messages");
-    console.log(rows);
     return rows;
 }
 
